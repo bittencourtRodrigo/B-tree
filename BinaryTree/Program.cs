@@ -1,7 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-
-namespace BinaryTree
+﻿namespace BinaryTree
 {
     class Program
     {
@@ -12,7 +9,8 @@ namespace BinaryTree
             {
                 Console.WriteLine("A -> Adicionar dados(inteiros) na árvore.");
                 Console.WriteLine("B -> Imprimir dados.");
-                Console.WriteLine("C -> Sair.");
+                Console.WriteLine("C -> Salvar dados em TXT.");
+                Console.WriteLine("D -> Sair.");
                 Console.Write("Sua escolha: ");
                 string opc = Console.ReadLine().ToUpper();
                 Console.Clear();
@@ -39,12 +37,21 @@ namespace BinaryTree
                     case "B":
                         if (tree.Top != null)
                         {
-                            string data = " ";
-                            tree.GetDataTree(tree.Top, ref data);
-                            Console.WriteLine($"Dados: {data}");
+                            string dat = "";
+                            tree.GetDataTree(tree.Top, ref dat);
+                            Console.WriteLine($"Dados: {dat}");
                         }
                         break;
                     case "C":
+                        if (tree.Top != null)
+                        {
+                            string data = "";
+                            tree.GetDataTree(tree.Top, ref data);
+                            FileSave.SaveTxt(data);
+                            Console.WriteLine(@"Salvo na pasta: C:\Arquivos Arvore Binaria\");
+                        }
+                        break;
+                    case "D":
                         return;
                 }
                 Console.WriteLine("Ação concluída. Aperte alguma tecla para voltar ao menu.");
