@@ -3,15 +3,15 @@ namespace BinaryTree
 {
     public class Tree
     {
-        private Node _top;
+        public Node Top;
         public Tree()
         {
         }
-        public void AddNode(int value)
+        public async void AddNodeAsync(int value)
         {
-            Add(ref _top, value);
+            AddNodeRecursive(ref Top, value);
         }
-        private void Add(ref Node node, int value)
+        private void AddNodeRecursive(ref Node node, int value)
         {
             if (node == null)
             {
@@ -22,35 +22,28 @@ namespace BinaryTree
 
             if (value < node.Value)
             {
-                Add(ref node.Left, value);
+                AddNodeRecursive(ref node.Left, value);
             }
 
             if (value >= node.Value)
             {
-                Add(ref node.Right, value);
+                AddNodeRecursive(ref node.Right, value);
             }
         }
-        public void Print(Node node, ref string stg)
+        public void GetDataTree(Node node, ref string stg)
         {
-            try
+            if (node.Left != null)
             {
-                if (node.Left != null)
-                {
-                    Print(node.Left, ref stg);
-                    stg += node.Value + " ";
-                }
-                else
-                {
-                    stg += node.Value + " ";
-                }
-                if (node.Right != null)
-                {
-                    Print(node.Right, ref stg);
-                }
+                GetDataTree(node.Left, ref stg);
+                stg += node.Value + " ";
             }
-            catch (Exception)
+            else
             {
-                throw new Exception("Talvez você tenha esquecido algo.");
+                stg += node.Value + " ";
+            }
+            if (node.Right != null)
+            {
+                GetDataTree(node.Right, ref stg);
             }
         }
     }
