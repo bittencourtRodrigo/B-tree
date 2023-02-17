@@ -1,5 +1,4 @@
-﻿using System;
-namespace BinaryTree
+﻿namespace BinaryTree.TreeModel
 {
     public class Node
     {
@@ -10,6 +9,7 @@ namespace BinaryTree
         public Node()
         {
         }
+
         public Node(int value)
         {
             Value = value;
