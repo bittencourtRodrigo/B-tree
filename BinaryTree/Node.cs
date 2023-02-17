@@ -3,10 +3,13 @@ namespace BinaryTree
 {
     public class Node
     {
-        public int Value;
+        public int? Value;
         public Node Right;
         public Node Left;
 
+        public Node()
+        {
+        }
         public Node(int value)
         {
             Value = value;

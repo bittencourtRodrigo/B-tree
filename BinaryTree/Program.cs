@@ -20,13 +20,18 @@
                         try
                         {
                             Console.Write("Quantos números inteiros quer adicionar? -> ");
-                            int opc2 = int.Parse(Console.ReadLine());
-                            for (int i = 0; i < opc2; i++)
+                            string opc2 = Console.ReadLine();
+                            string[] stg = opc2.Split(' ');
+                            foreach (var item in stg)
+                            {
+                                tree.AddNode(int.Parse(item));
+                            }
+                            /*for (int i = 0; i < opc2; i++)
                             {
                                 Console.Write($"{i}º: ");
                                 int value = int.Parse(Console.ReadLine());
-                                tree.AddNodeAsync(value);
-                            }
+                                tree.AddNode(value);
+                            }*/
                         }
                         catch (Exception e)
                         {
@@ -52,7 +57,11 @@
                         }
                         break;
                     case "D":
-                        return;
+                        int x = int.Parse(Console.ReadLine());
+                        tree.FindNode(x);
+
+                        Console.WriteLine(" DELETE");
+                        break;
                 }
                 Console.WriteLine("Ação concluída. Aperte alguma tecla para voltar ao menu.");
                 Console.ReadKey();
