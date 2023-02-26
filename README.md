@@ -11,7 +11,6 @@ Topics you will find:
 - Salvando dados em .TXT com C#
 
 ## How to use
-- Have VS community 2022 [(How to install on Windows)](https://www.youtube.com/watch?v=B8HULJjuq2Y)
 - Clone this repository and and run *BinaryTree.exe* on: BinaryTree\BinaryTree\bin\Debug\net6.0 
 
 ## If you want to contribute
