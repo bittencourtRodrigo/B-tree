@@ -2,7 +2,7 @@
 
 ## Learn the implemented logic of a binary tree data structure made in C#. Insert, query and delete data (integers).
 
-Project requested by professor Ikaro Campos, who currently (02/2023) teaches at [Instituto Federal da Bahia - Santo Antônio de Jesus](https://www.linkedin.com/school/ifba---instituto-federal-da-bahia/), for evaluation and grade definition. The initial question was: choose some data structure (FIFO queue, chained list or tree B) and implement all the logic in a program. I chose tree B and here it is.
+Project requested by professor Ikaro Campos, who currently (02/2023) teaches at [Instituto Federal da Bahia - Santo Antônio de Jesus](https://www.linkedin.com/school/ifba---instituto-federal-da-bahia/), for evaluation and grade definition. The initial question was: choose some data structure (FIFO queue, chained list or tree B) and implement all the logic in a program. I chose tree binary and here it is.
 
 Topics you will find:
 - Estrutura para inserir dados em arvore B com C#
